@@ -1,0 +1,180 @@
+<!doctype html>
+<html ⚡4email>
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp4email-boilerplate>
+        body {
+            visibility: hidden
+        }
+    </style>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,800|Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <style amp-custom>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
+
+        }
+
+        p {
+            color: #5f5f5f;
+        }
+
+        .email-wrapper {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .default-padding {
+            padding: 10px;
+        }
+
+        .menu-link {
+            color: #fff;
+            font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .sidebar {
+            width: 175px;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-link {
+            text-transform: uppercase;
+            font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+            color: #6600CC;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            transition: all .2s ease-in-out;
+            font-weight: 700;
+            font-size: 13px;
+            transition: all .2s ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: #4371CF;
+            text-decoration: underline;
+        }
+
+        .btn {
+            color: #FFF;
+            background-image: linear-gradient(90deg, #4178cf 0%, #6600cc 100%);
+            letter-spacing: 1.5px;
+            font-size: 14px;
+            font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            border: rgba(0, 0, 0, alpha);
+            text-transform: uppercase;
+            border-radius: 50px;
+            padding: 1.2rem 3rem;
+            transition: all .2s ease-in-out;
+        }
+
+        .btn:hover {
+            border-radius: 0;
+        }
+
+        .phbg {
+            background-color: #000;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="email-wrapper">
+
+        <!-- Pre-Header Start -->
+        <div class="phbg">
+            <amp-sidebar id="sidebar-right" class="sidebar default-padding" layout="nodisplay" side="right">
+                <nav class="navbar">
+                    <h3>Side Menu</h3>
+                    <ul class="nav-list">
+                        <a class="nav-link" href="https://tinuiti.com/what-we-do/our-services/" target="_blank">
+                            <li>Our Services</li>
+                        </a>
+                        <a class="nav-link" href="https://tinuiti.com/about-us/" target="_blank">
+                            <li>Our Vision</li>
+                        </a>
+                        <a class="nav-link" href="https://tinuiti.com/our-work/" target="_blank">
+                            <li>Results</li>
+                        </a>
+                        <a class="nav-link" href="https://tinuiti.com/blog/" target="_blank">
+                            <li>Blog</li>
+                        </a>
+                        <a class="nav-link" href="https://tinuiti.com/content/" target="_blank">
+                            <li>Guides & Webinars</li>
+                        </a>
+                        <a class="nav-link" href="https://tinuiti.com/events/" target="_blank">
+                            <li>Events</li>
+                        </a>
+                        <a class="nav-link" href="https://tinuiti.com/about-us/company-news/" target="_blank">
+                            <li>News</li>
+                        </a>
+                        <a class="nav-link" href="https://tinuiti.com/culture/" target="_blank">
+                            <li>Culture</li>
+                        </a>
+                        <a class="nav-link" href="https://tinuiti.com/about-us/leadership-team/" target="_blank">
+                            <li>Team</li>
+                        </a>
+                        <a class="nav-link" href="https://tinuiti.com/careers/" target="_blank">
+                            <li>Careers</li>
+                        </a>
+                    </ul>
+                </nav>
+            </amp-sidebar>
+            <a class="menu-link" on="tap:sidebar-right.toggle">Menu >></a>
+            <div id="target-element-right"></div>
+        </div>
+
+
+        <header class="default-padding center">
+            <a href="https://tinuiti.com/">
+                <amp-img src="https://i.ibb.co/R4sxPXp/logo.png" width="150" height="52" alt="Tinuiti"></amp-img>
+            </a>
+        </header>
+        <!-- Pre-Header End -->
+
+        <!-- Hero Section -->
+        <section class="default-padding">
+            
+        </section>
+
+        <!-- Hero Section -->
+
+
+    </section>
+</body>
+
+</html>
