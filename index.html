@@ -23,7 +23,7 @@
         h6 {
             font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
             margin: 0;
-            padding: .5rem;
+            padding: .5rem 0;
         }
 
         h1 {
@@ -131,7 +131,8 @@
             display: inline-block;
         }
 
-        .btn:hover, .white-btn:hover {
+        .btn:hover,
+        .white-btn:hover {
             border-radius: 0;
         }
 
@@ -162,6 +163,36 @@
         .amp-carousel-button-next,
         .amp-carousel-button-prev {
             border-radius: 50px;
+        }
+
+        .work-wrapper {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 20px;
+            padding: 20px 0;
+            
+        }
+
+        .work-item {
+            text-decoration: none;
+            color: #000;
+            border: 1px solid #f2f2f2;
+            transition: all .2s ease-in-out;
+            box-shadow: 3px 3px 15px 6px #ccc;
+            -moz-box-shadow: 3px 3px 15px 6px #ccc;
+            -webkit-box-shadow: 3px 3px 15px 6px #ccc;
+        }
+
+        .work-item:hover {
+            transform: scale(1.015);
+            box-shadow: 3px 3px 15px 10px #ccc;
+            -moz-box-shadow: 3px 3px 15px 10px #ccc;
+            -webkit-box-shadow: 3px 3px 15px 10px #ccc;
+        }
+
+        .read-more {
+            text-decoration: underline;
+            color: #6600cc;
         }
     </style>
 
@@ -217,7 +248,7 @@
 
 
         <header class="default-padding center">
-            <a href="https://tinuiti.com/">
+            <a href="https://tinuiti.com/" target="_blank">
                 <amp-img src="https://i.ibb.co/R4sxPXp/logo.png" width="150" height="52" alt="Tinuiti"></amp-img>
             </a>
         </header>
@@ -271,16 +302,47 @@
                             winning service.</span>
                     </p>
                     <div class="btn-wrapper">
-                    <a class="white-btn" href="https://tinuiti.com/what-we-do/our-services/">
-                        <span [text]="myState.headlines[currentHeadline].button">See What We Do</span>
-                    </a>
-                </div>
+                        <a class="white-btn" href="https://tinuiti.com/what-we-do/our-services/" target="_blank">
+                            <span [text]="myState.headlines[currentHeadline].button">See What We Do</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
         </section>
         <!-- Hero Section End -->
 
+        <!-- Work Area Start -->
+        <section>
+            <div class="work-wrapper">
+                <a href="https://tinuiti.com/case-study/advil/" class="work-item">
+                    <figure>
+                        <amp-img src="https://i.ibb.co/S5NbFwx/Tinuiti-Advil.png" width="308" height="256"
+                            layout="responsive" alt="Advil">
+                        </amp-img>
+                        <figcaption>
+                            <h3>Driving Sales With an Immersive Amazon Store Shopping Experience</h3>
+                            <h4 class="read-more">READ MORE</h4>
+                        </figcaption>
+                    </figure>
+                </a>
+
+                <a href="https://tinuiti.com/case-study/advil/" class="work-item">
+                    <figure>
+                        <amp-img src="https://i.ibb.co/wR2RZYj/Tinuiti-MVMT.png" width="308" height="256"
+                            layout="responsive" alt="an image">
+                        </amp-img>
+                        <figcaption>
+                            <h3>Boosting Opens & Doubling Revenue with Personalized & Segmented Emails</h3>
+                            <h4 class="read-more">READ MORE</h4>
+                        </figcaption>
+                    </figure>
+                </a>
+
+
+            </div>
+        </section>
+        <!-- Work Area End -->
 
     </section>
     <!-- Email Wrapper End -->
