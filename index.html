@@ -11,6 +11,7 @@
     </style>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800|Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <style amp-custom>
@@ -21,6 +22,21 @@
         h5,
         h6 {
             font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+            margin: 0;
+            padding: .5rem;
+        }
+
+        h1 {
+            font-size: 32px;
+            line-height: 1.25;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 20px;
         }
 
         body {
@@ -32,6 +48,7 @@
 
         p {
             color: #5f5f5f;
+            margin: 0;
         }
 
         .email-wrapper {
@@ -99,13 +116,47 @@
             transition: all .2s ease-in-out;
         }
 
-        .btn:hover {
+        .white-btn {
+            color: #000;
+            background-color: #fff;
+            letter-spacing: 1.5px;
+            font-size: 14px;
+            font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 50px;
+            padding: 1.2rem 3rem;
+            transition: all .2s ease-in-out;
+            display: inline-block;
+        }
+
+        .btn:hover, .white-btn:hover {
             border-radius: 0;
+        }
+
+        .btn-wrapper {
+            text-align: center;
+            padding: 1rem;
         }
 
         .phbg {
             background-color: #000;
             padding: 5px;
+        }
+
+        .banner {
+            background-image: linear-gradient(90deg, #4178cf 0%, #6600cc 100%);
+        }
+
+        .banner-content {
+            width: 80%;
+            margin: 0 auto;
+            padding: 25px 0;
+        }
+
+        .white-font {
+            color: #fff;
         }
     </style>
 
@@ -167,8 +218,60 @@
         <!-- Pre-Header End -->
 
         <!-- Hero Section -->
-        <section class="default-padding">
-            
+        <section>
+            <amp-state id="myState">
+                <script type="application/json">
+                    {
+                        "headlines": [{
+                                "name": "Unfold endless possibilities",
+                                "description": "Accelerate your business across the Triopoly of Google, Amazon, Facebook, and beyond. You'll be glad you did with our award winning service.",
+                                "button": "See What We Do",
+                                "link": "https://tinuiti.com/what-we-do/our-services/"
+                            },
+                            {
+                                "name": "Activate your full potential",
+                                "description": "We connect brands to their customers across channels with comprehensive digital marketing strategies that maximize their impact.",
+                                "button": "See Our Results",
+                                "link": "https://tinuiti.com/our-work/"
+                            },
+                            {
+                                "name": "Success through innovation",
+                                "description": "Tinuiti is the largest independent digital performance marketing agency in North America. We hire the brightest minds that care about you.",
+                                "button": "Our Vision",
+                                "link": "https://tinuiti.com/about-us/"
+                            }
+                        ]
+                    }
+                </script>
+            </amp-state>
+
+            <amp-carousel width="800" height="350" layout="responsive" type="slides"
+                on="slideChange:AMP.setState({currentHeadline: event.index})">
+                <amp-img src="https://i.ibb.co/SR2Wj7z/Tinuiti-1.png" width="800" height="350">
+                </amp-img>
+                <amp-img src="https://i.ibb.co/jfmfTcW/Tinuiti-2.png" width="800" height="350">
+                </amp-img>
+                <amp-img src="https://i.ibb.co/cJLXThD/Tinuiti-3.png" width="800" height="350">
+                </amp-img>
+            </amp-carousel>
+            <div class="banner">
+                <div class="banner-content">
+                    <h1 class="center white-font">
+                        <span [text]="myState.headlines[currentHeadline].name">Unfold endless possibilities</span>
+                    </h1>
+                    <p class="center white-font">
+                        <span [text]="myState.headlines[currentHeadline].description">Accelerate your business across
+                            the Triopoly of Google, Amazon, Facebook, and beyond. You'll be glad you did with our award
+                            winning service.</span>
+                    </p>
+                    <div class="btn-wrapper">
+                    <a class="white-btn" href="https://tinuiti.com/what-we-do/our-services/">
+                        <span [text]="myState.headlines[currentHeadline].button">See What We Do</span>
+                    </a>
+                </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- Hero Section -->
