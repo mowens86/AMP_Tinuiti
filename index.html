@@ -226,6 +226,10 @@
             padding: 20px;
         }
 
+        .form-section {
+            text-align: center;
+        }
+
         .pred-wrapper {
             display: flex;
             flex-direction: column;
@@ -296,17 +300,6 @@
             text-align: center;
         }
 
-        .option-input:checked::after {
-            -webkit-animation: click-wave 0.65s;
-            -moz-animation: click-wave 0.65s;
-            animation: click-wave 0.65s;
-            background: linear-gradient(90deg, #4178cf 0%, #6600cc 100%);
-            content: '';
-            display: block;
-            position: relative;
-            z-index: 100;
-        }
-
         .option-input.radio {
             border-radius: 50%;
         }
@@ -314,12 +307,29 @@
         .option-input.radio::after {
             border-radius: 50%;
         }
+
+        .input-grp {
+            display: inline-block;
+            padding: .25rem;
+        }
+
+        .label {
+            font-size: 14px;
+        }
+
+        .textarea-wrapper {
+            padding: .5rem;
+        }
+
+        .submit-msg {
+            padding: .5rem 0;
+        }
     </style>
 
 </head>
 
 <body>
-    
+
 
     <!-- Start Email Wrapper  -->
     <section class="email-wrapper">
@@ -517,26 +527,43 @@
 
         <!-- Start AMP Email Rating -->
         <section class="form-section">
-            <form class="form" method="post" action-xhr="https://www.cats.com/api/filler">
+            <form class="form" method="POST" action-xhr="https://formspree.io/meqapzbw">
                 <h1 class="mobile-h1">Rate Your AMP Email Experience</h1>
-                <input class="input option-input radio" type="radio" id="numOne" name="rating" value="1" checked>
-                <label class="label" for="terrible">Terrible</label>
-                <input class="input option-input radio" type="radio" id="numTwo" name="rating" value="2">
-                <label class="label" for="bad">Bad</label>
-                <input class="input option-input radio" type="radio" id="numThree" name="rating" value="3">
-                <label class="label" for="okay">Okay</label>
-                <input class="input option-input radio" type="radio" id="numFour" name="rating" value="4">
-                <label class="label" for="great">Great</label>
-                <input class="input option-input radio" type="radio" id="numFive" name="rating" value="5">
-                <label class="label" for="amazing">Amazing</label>
+                <div class="input-grp">
+                    <input class="input option-input radio" type="radio" id="numOne" name="rating" value="Amazing" checked>
+                    <label class="label" for="amazing">Amazing</label>
+                </div>
+                <div class="input-grp">
+                    <input class="input option-input radio" type="radio" id="numTwo" name="rating" value="Great">
+                    <label class="label" for="great">Great</label>
+                </div>
+
+                <div class="input-grp">
+                    <input class="input option-input radio" type="radio" id="numThree" name="rating" value="Okay">
+                    <label class="label" for="okay">Okay</label>
+                </div>
+
+                <div class="input-grp">
+                    <input class="input option-input radio" type="radio" id="numFour" name="rating" value="Bad">
+                    <label class="label" for="bad">Bad</label>
+                </div>
+
+                <div class="input-grp">
+                    <input class="input option-input radio" type="radio" id="numFive" name="rating" value="Terrible">
+                    <label class="label" for="terrible">Terrible</label>
+                </div>
+
+                <div class="textarea-wrapper">
                 <textarea class="textarea" name="textarea" id="textarea"
                     placeholder="Write what you liked, didn't like, or would like to see improved here..."></textarea>
+                </div>
+
                 <input class="btn black-btn" style="cursor: pointer;" type="submit" value="Rate Now">
-                <div submit-success>
+                <div class="submit-msg" submit-success>
                     Success! Thanks for your feedback!
                 </div>
-                <div submit-error>
-                    Error! Please try again...
+                <div class="submit-msg" submit-error>
+                    Success! Thanks for your feedback!
                 </div>
             </form>
         </section>
@@ -545,25 +572,6 @@
 
     </section>
     <!-- End Email Wrapper  -->
-
-    <style amp-keyframes>
-        @keyframes click-wave {
-            0% {
-                height: 20px;
-                width: 20px;
-                opacity: 0.35;
-                position: relative;
-            }
-
-            100% {
-                height: 100px;
-                width: 100px;
-                margin-left: -45px;
-                margin-top: -45px;
-                opacity: 0;
-            }
-        }
-    </style>
 </body>
 
 </html>
