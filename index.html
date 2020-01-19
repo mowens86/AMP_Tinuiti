@@ -189,6 +189,12 @@
             border-radius: 50px;
         }
 
+        .amp-carousel-button-next:focus,
+        .amp-carousel-button-prev:focus {
+            outline: none;
+            border: 2px solid #fff;
+        }
+
         .work-wrapper {
             display: grid;
             grid-template-columns: auto auto;
@@ -222,7 +228,8 @@
         }
 
         .crm-section,
-        .form-section {
+        .form-section,
+        .footer-section {
             padding: 20px;
         }
 
@@ -280,7 +287,7 @@
             display: inline-block;
             outline: none;
             position: relative;
-            z-index: 100;
+            z-index: 50;
         }
 
         .option-input:hover {
@@ -298,6 +305,7 @@
             content: '✔';
             display: inline-block;
             text-align: center;
+            z-index: 55;
         }
 
         .option-input.radio {
@@ -323,6 +331,28 @@
 
         .submit-msg {
             padding: .5rem 0;
+        }
+
+        .footer-section {
+            background-color: #000;
+            text-align: center;
+        }
+        
+        .social-wrapper {
+            padding: 10px 0;
+        }
+
+        .social-link {
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+        .address, .copyright {
+            padding: 5px 0;
+        }
+
+        .copyright {
+            font-size: 12px;
         }
     </style>
 
@@ -567,8 +597,39 @@
                 </div>
             </form>
         </section>
-
         <!-- End AMP Email Rating -->
+
+        <!-- Start Footer -->
+        <section class="footer-section">
+            <div class="social-wrapper">
+                <div>
+                    <a href="https://www.facebook.com/tinuiti1/" class="social-link" target="_blank">
+                        <amp-img src="https://i.ibb.co/XkQc4F6/fb.png" width="30" height="30"
+                            layout="fixed" alt="Facebook">
+                        </amp-img>
+                    </a>
+                    <a href="https://twitter.com/tinuiti" class="social-link" target="_blank">
+                        <amp-img src="https://i.ibb.co/C6fTrKx/twitter.png" width="30" height="30"
+                            layout="fixed" alt="Twitter">
+                        </amp-img>
+                    </a>
+                    <a href="https://www.linkedin.com/company/tinuiti/" class="social-link" target="_blank">
+                        <amp-img src="https://i.ibb.co/WcVPLvc/linkedin.png" width="30" height="30"
+                            layout="fixed" alt="Linkedin">
+                        </amp-img>
+                    </a>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="work-links white-font">
+                    <a href="https://tinuiti.com/our-work/" class="white-font" target="_blank">Our Work</a> | <a href="https://tinuiti.com/about-us/" class="white-font" target="_blank">Our Vision</a> | <a href="https://tinuiti.com/what-we-do/our-services/" class="white-font" target="_blank">Our Services</a>
+                </div>
+                <p class="white-font address">142 W 36th St. FL 11 <br>New York, NY 10018</p>
+                <a href="https://www.#.com" class="white-font unsub-link">Unsubscribe</a>
+                <p class="white-font copyright">Copyright © 2020 Tinuiti. All Rights Reserved.</p>
+            </div>
+        </section>
+        <!-- End Footer -->
 
     </section>
     <!-- End Email Wrapper  -->
