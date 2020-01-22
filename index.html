@@ -252,6 +252,26 @@
             padding: 20px;
         }
 
+        .arrow {
+            border: solid #6600CC;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .down {
+            margin: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .i-amphtml-accordion-header:focus .down {
+            
+            margin: 2px;
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
         .crm-section,
         .form-section,
         .footer-section {
@@ -564,9 +584,9 @@
                 on="slideChange:AMP.setState({currentContent: event.index})">
                 <amp-img src="https://i.ibb.co/1z645jB/Tinuiti-1v2.png" width="800" height="500">
                 </amp-img>
-                <amp-img src="https://i.ibb.co/1z645jB/Tinuiti-1v2.png" width="800" height="500">
+                <amp-img src="https://i.ibb.co/W564VCV/Tinuiti-2v2.png" width="800" height="500">
                 </amp-img>
-                <amp-img src="https://i.ibb.co/1z645jB/Tinuiti-1v2.png" width="800" height="500">
+                <amp-img src="https://i.ibb.co/r0gWGY0/Tinuiti-3v2.png" width="800" height="500">
                 </amp-img>
             </amp-carousel>
             <div class="bg-gradient">
@@ -668,26 +688,29 @@
 
         <!-- Start Accordion Tips -->
         <section class="accordion-section">
-            <h1 class="black-font center">Helpful Guides from the Blog</h1>
+            <h1 class="black-font center mobile-h1">Helpful Guides from the Blog</h1>
             <amp-accordion class="accordion" animate expand-single-section>
 
                 <section>
-                    <h4 class="center">Section 1</h4>
-                    <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus
+                    <h3 class="center mobile-h3">Section 1 &nbsp;<i class="arrow down"></i></h3>
+                    <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id,
+                        vestibulum aliqua vivamus
                         luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis
                         volutpat,
                         dolore neque feugiat proin fermentum odio, odio arcu in eu wisi. </p>
                 </section>
                 <section>
-                    <h4 class="center">Section 2</h4>
-                    <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus
+                    <h3 class="center mobile-h3">Section 2 &nbsp;<i class="arrow down"></i></h3>
+                    <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id,
+                        vestibulum aliqua vivamus
                         luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis
                         volutpat,
                         dolore neque feugiat proin fermentum odio, odio arcu in eu wisi. </p>
                 </section>
                 <section>
-                    <h4 class="center">Section 3</h4>
-                    <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus
+                    <h3 class="center mobile-h3">Section 3 &nbsp;<i class="arrow down"></i></h3>
+                    <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id,
+                        vestibulum aliqua vivamus
                         luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis
                         volutpat,
                         dolore neque feugiat proin fermentum odio, odio arcu in eu wisi. </p>
