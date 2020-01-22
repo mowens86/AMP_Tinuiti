@@ -13,6 +13,7 @@
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <!-- Remove link rel for playground testing start -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800|Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
@@ -61,7 +62,7 @@
         }
 
         .mobile-h1 {
-            font-size: 26px
+            font-size: 26px;
         }
 
         .mobile-h2 {
@@ -170,6 +171,10 @@
             padding: 5px;
         }
 
+        .desktop-carousel {
+            display: none;
+        }
+
         .bg-gradient {
             background-image: linear-gradient(90deg, #4178cf 0%, #6600cc 100%);
         }
@@ -177,11 +182,15 @@
         .banner-content {
             width: 80%;
             margin: 0 auto;
-            padding: 25px 0;
+            padding: 15px 0;
         }
 
         .white-font {
             color: #fff;
+        }
+
+        .black-font {
+            color: #000;
         }
 
         .amp-carousel-button-next,
@@ -197,9 +206,9 @@
 
         .work-wrapper {
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: 90%;
             padding: 20px 0;
-
+            justify-content: center;
         }
 
         .work-item {
@@ -211,6 +220,7 @@
             -moz-box-shadow: 3px 3px 15px 6px #ccc;
             -webkit-box-shadow: 3px 3px 15px 6px #ccc;
             margin: 10px;
+
         }
 
         .work-item:hover {
@@ -225,6 +235,21 @@
             text-decoration: underline;
             color: #6600cc;
             letter-spacing: 1.5px;
+            display: inline-block;
+        }
+
+        .i-amphtml-accordion-header {
+            border-top: 2px solid #6600CC;
+            padding: .25rem;
+        }
+
+        .i-amphtml-accordion-header:focus {
+            outline: none;
+            border: 2px solid #85bf31;
+        }
+
+        .accordion-content {
+            padding: 20px;
         }
 
         .crm-section,
@@ -244,7 +269,7 @@
         }
 
         .pred-section {
-            width: 400px;
+            width: 90%;
             height: auto;
             margin: auto;
         }
@@ -337,7 +362,7 @@
             background-color: #000;
             text-align: center;
         }
-        
+
         .social-wrapper {
             padding: 10px 0;
         }
@@ -347,12 +372,93 @@
             padding: 0 10px;
         }
 
-        .address, .copyright {
+        .address,
+        .copyright {
             padding: 5px 0;
         }
 
         .copyright {
             font-size: 12px;
+        }
+
+        @media (min-width: 400px) {
+            .mobile-h2 {
+                font-size: 16px;
+            }
+
+            .mobile-carousel {
+                display: none;
+            }
+
+            .desktop-carousel {
+                display: block;
+            }
+
+            .banner-content {
+                padding: 25px 0;
+            }
+
+            .pred-wrapper {
+                flex-direction: row;
+            }
+
+            .pred-section {
+                padding: 10px;
+            }
+
+            .btn {
+                font-size: 12px;
+            }
+
+            .pred-wrapper {
+                flex-direction: column;
+            }
+
+            .pred-section {
+                width: 70%;
+            }
+
+
+        }
+
+        @media (min-width: 600px) {
+            .mobile-h1 {
+                font-size: 30px;
+            }
+
+            .mobile-h2 {
+                font-size: 24px;
+            }
+
+            .mobile-carousel {
+                display: none;
+            }
+
+            .desktop-carousel {
+                display: block;
+            }
+
+            .btn {
+                font-size: 16px;
+            }
+
+            .work-wrapper {
+                grid-template-columns: 50% 50%;
+            }
+
+            .pred-section {
+                width: 60%;
+            }
+        }
+
+        @media (min-width: 700px) {
+            .mobile-h1 {
+                font-size: 35px;
+            }
+
+            .mobile-h2 {
+                font-size: 28px;
+            }
         }
     </style>
 
@@ -443,13 +549,24 @@
                 </script>
             </amp-state>
 
-            <amp-carousel width="800" height="350" layout="responsive" type="slides"
+            <amp-carousel class="desktop-carousel" width="800" height="350" layout="responsive" type="slides"
+                layout="responsive" controls loop autoplay delay="4000"
                 on="slideChange:AMP.setState({currentContent: event.index})">
                 <amp-img src="https://i.ibb.co/SR2Wj7z/Tinuiti-1.png" width="800" height="350">
                 </amp-img>
                 <amp-img src="https://i.ibb.co/jfmfTcW/Tinuiti-2.png" width="800" height="350">
                 </amp-img>
                 <amp-img src="https://i.ibb.co/cJLXThD/Tinuiti-3.png" width="800" height="350">
+                </amp-img>
+            </amp-carousel>
+            <amp-carousel class="mobile-carousel" width="800" height="500" layout="responsive" type="slides"
+                layout="responsive" controls loop autoplay delay="4000"
+                on="slideChange:AMP.setState({currentContent: event.index})">
+                <amp-img src="https://i.ibb.co/1z645jB/Tinuiti-1v2.png" width="800" height="500">
+                </amp-img>
+                <amp-img src="https://i.ibb.co/1z645jB/Tinuiti-1v2.png" width="800" height="500">
+                </amp-img>
+                <amp-img src="https://i.ibb.co/1z645jB/Tinuiti-1v2.png" width="800" height="500">
                 </amp-img>
             </amp-carousel>
             <div class="bg-gradient">
@@ -476,59 +593,108 @@
         <!-- Start Work Area  -->
         <section>
             <div class="work-wrapper">
-                <a href="https://tinuiti.com/case-study/advil/" class="work-item" target="_blank">
+                <div class="work-item">
                     <figure>
-                        <amp-img src="https://i.ibb.co/S5NbFwx/Tinuiti-Advil.png" width="308" height="256"
-                            layout="responsive" alt="Advil">
+                        <a href="https://tinuiti.com/case-study/advil/" target="_blank">
+                            <amp-img src="https://i.ibb.co/S5NbFwx/Tinuiti-Advil.png" width="308" height="256"
+                                layout="responsive" alt="Advil">
+                        </a>
                         </amp-img>
                         <figcaption>
-                            <h4 class="mobile-h4">Driving Sales With an Immersive Amazon Store Shopping Experience</h4>
-                            <h4 class="read-more">READ MORE</h4>
-                        </figcaption>
-                    </figure>
-                </a>
-
-                <a href="https://tinuiti.com/case-study/mvmt/" class="work-item" target="_blank">
-                    <figure>
-                        <amp-img src="https://i.ibb.co/wR2RZYj/Tinuiti-MVMT.png" width="308" height="256"
-                            layout="responsive" alt="an image">
-                        </amp-img>
-                        <figcaption>
-                            <h4 class="mobile-h4">Boosting Opens & Doubling Revenue with Personalized & Segmented Emails
+                            <h4 class="mobile-h4">Driving Sales With an Immersive Amazon Store Shopping Experience
                             </h4>
-                            <h4 class="read-more">READ MORE</h4>
+                            <a href="https://tinuiti.com/case-study/advil/" target="_blank">
+                                <h4 class="read-more">READ MORE</h4>
+                            </a>
                         </figcaption>
                     </figure>
-                </a>
+                </div>
 
-                <a href="https://tinuiti.com/case-study/samanage/" class="work-item" target="_blank">
+                <div class="work-item">
                     <figure>
-                        <amp-img src="https://i.ibb.co/HgRCJ2W/Tinuiti-Samanage.png" width="308" height="256"
-                            layout="responsive" alt="Advil">
-                        </amp-img>
+                        <a href="https://tinuiti.com/case-study/mvmt/" target="_blank">
+                            <amp-img src="https://i.ibb.co/wR2RZYj/Tinuiti-MVMT.png" width="308" height="256"
+                                layout="responsive" alt="MVMT">
+                            </amp-img>
+                        </a>
                         <figcaption>
-                            <h4 class="mobile-h4">Tackling Tough SEO Updates to Win +41.4% Jump in Organic Site Traffic
+                            <h4 class="mobile-h4">Boosting Opens & Doubling Revenue with Personalized & Segmented
+                                Emails
                             </h4>
-                            <h4 class="read-more">READ MORE</h4>
+                            <a href="https://tinuiti.com/case-study/mvmt/" target="_blank">
+                                <h4 class="read-more">READ MORE</h4>
+                            </a>
                         </figcaption>
                     </figure>
-                </a>
+                </div>
 
-                <a href="https://tinuiti.com/case-study/blink/" class="work-item" target="_blank">
+                <div class="work-item">
                     <figure>
-                        <amp-img src="https://i.ibb.co/RvDDCmj/Tinuiti-Blink.png" width="308" height="256"
-                            layout="responsive" alt="an image">
-                        </amp-img>
+                        <a href="https://tinuiti.com/case-study/samanage/" target="_blank">
+                            <amp-img src="https://i.ibb.co/HgRCJ2W/Tinuiti-Samanage.png" width="308" height="256"
+                                layout="responsive" alt="Samanage">
+                            </amp-img>
+                        </a>
+                        <figcaption>
+                            <h4 class="mobile-h4">Tackling Tough SEO Updates to Win +41.4% Jump in Organic Site
+                                Traffic
+                            </h4>
+                            <a href="https://tinuiti.com/case-study/samanage/" target="_blank">
+                                <h4 class="read-more">READ MORE</h4>
+                            </a>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="work-item">
+                    <figure>
+                        <a href="https://tinuiti.com/case-study/blink/" target="_blank">
+                            <amp-img src="https://i.ibb.co/RvDDCmj/Tinuiti-Blink.png" width="308" height="256"
+                                layout="responsive" alt="Blink">
+                            </amp-img>
+                        </a>
                         <figcaption>
                             <h4 class="mobile-h4">Saving Time and Money on Facebook with Dynamic Ads</h4>
-                            <h4 class="read-more">READ MORE</h4>
+                            <a href="https://tinuiti.com/case-study/blink/" target="_blank">
+                                <h4 class="read-more">READ MORE</h4>
+                            </a>
                         </figcaption>
                     </figure>
-                </a>
+                </div>
 
             </div>
         </section>
         <!-- End Work Area -->
+
+        <!-- Start Accordion Tips -->
+        <section class="accordion-section">
+            <h1 class="black-font center">Helpful Guides from the Blog</h1>
+            <amp-accordion class="accordion" animate expand-single-section>
+
+                <section>
+                    <h4 class="center">Section 1</h4>
+                    <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus
+                        luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis
+                        volutpat,
+                        dolore neque feugiat proin fermentum odio, odio arcu in eu wisi. </p>
+                </section>
+                <section>
+                    <h4 class="center">Section 2</h4>
+                    <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus
+                        luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis
+                        volutpat,
+                        dolore neque feugiat proin fermentum odio, odio arcu in eu wisi. </p>
+                </section>
+                <section>
+                    <h4 class="center">Section 3</h4>
+                    <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus
+                        luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis
+                        volutpat,
+                        dolore neque feugiat proin fermentum odio, odio arcu in eu wisi. </p>
+                </section>
+            </amp-accordion>
+        </section>
+        <!-- End Accordion Tips -->
 
         <!-- Start CRM & Email Marketing Predictions for 2020 Section -->
         <section class="crm-section bg-gradient">
@@ -542,7 +708,7 @@
                 </div>
                 <div class="pred-section">
                     <div class="content-wrapper white-font center">
-                        <h1 class="mobile-h1">Email Marketing Strategies for the Modern Marketer</h1>
+                        <h2 class="mobile-h2">Email Marketing Strategies for the Modern Marketer</h2>
                         <div class="btn-wrapper">
                             <a class="btn white-btn"
                                 href="https://tinuiti.com/content/guides/2020-crm-email-marketing-predictions/"
@@ -560,7 +726,8 @@
             <form class="form" method="POST" action-xhr="https://formspree.io/meqapzbw">
                 <h1 class="mobile-h1">Rate Your AMP Email Experience</h1>
                 <div class="input-grp">
-                    <input class="input option-input radio" type="radio" id="numOne" name="rating" value="Amazing" checked>
+                    <input class="input option-input radio" type="radio" id="numOne" name="rating" value="Amazing"
+                        checked>
                     <label class="label" for="amazing">Amazing</label>
                 </div>
                 <div class="input-grp">
@@ -584,8 +751,8 @@
                 </div>
 
                 <div class="textarea-wrapper">
-                <textarea class="textarea" name="textarea" id="textarea"
-                    placeholder="Write what you liked, didn't like, or would like to see improved here..."></textarea>
+                    <textarea class="textarea" name="textarea" id="textarea"
+                        placeholder="Write what you liked, didn't like, or would like to see improved here..."></textarea>
                 </div>
 
                 <input class="btn black-btn" style="cursor: pointer;" type="submit" value="Rate Now">
@@ -604,25 +771,28 @@
             <div class="social-wrapper">
                 <div>
                     <a href="https://www.facebook.com/tinuiti1/" class="social-link" target="_blank">
-                        <amp-img src="https://i.ibb.co/XkQc4F6/fb.png" width="30" height="30"
-                            layout="fixed" alt="Facebook">
+                        <amp-img src="https://i.ibb.co/XkQc4F6/fb.png" width="30" height="30" layout="fixed"
+                            alt="Facebook">
                         </amp-img>
                     </a>
                     <a href="https://twitter.com/tinuiti" class="social-link" target="_blank">
-                        <amp-img src="https://i.ibb.co/C6fTrKx/twitter.png" width="30" height="30"
-                            layout="fixed" alt="Twitter">
+                        <amp-img src="https://i.ibb.co/C6fTrKx/twitter.png" width="30" height="30" layout="fixed"
+                            alt="Twitter">
                         </amp-img>
                     </a>
                     <a href="https://www.linkedin.com/company/tinuiti/" class="social-link" target="_blank">
-                        <amp-img src="https://i.ibb.co/WcVPLvc/linkedin.png" width="30" height="30"
-                            layout="fixed" alt="Linkedin">
+                        <amp-img src="https://i.ibb.co/WcVPLvc/linkedin.png" width="30" height="30" layout="fixed"
+                            alt="Linkedin">
                         </amp-img>
                     </a>
                 </div>
             </div>
             <div class="content-wrapper">
                 <div class="work-links white-font">
-                    <a href="https://tinuiti.com/our-work/" class="white-font" target="_blank">Our Work</a> | <a href="https://tinuiti.com/about-us/" class="white-font" target="_blank">Our Vision</a> | <a href="https://tinuiti.com/what-we-do/our-services/" class="white-font" target="_blank">Our Services</a>
+                    <a href="https://tinuiti.com/our-work/" class="white-font" target="_blank">Our Work</a> | <a
+                        href="https://tinuiti.com/about-us/" class="white-font" target="_blank">Our Vision</a> | <a
+                        href="https://tinuiti.com/what-we-do/our-services/" class="white-font" target="_blank">Our
+                        Services</a>
                 </div>
                 <p class="white-font address">142 W 36th St. FL 11 <br>New York, NY 10018</p>
                 <a href="https://www.#.com" class="white-font unsub-link">Unsubscribe</a>
