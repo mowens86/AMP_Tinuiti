@@ -14,6 +14,9 @@
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
+    <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js">
+    </script>
     <!-- Remove link rel for playground testing start -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800|Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
@@ -59,21 +62,22 @@
         p {
             color: #5f5f5f;
             margin: 0;
+            font-size: 14px;
         }
 
-        .mobile-h1 {
+        .resp-h1 {
             font-size: 26px;
         }
 
-        .mobile-h2 {
+        .resp-h2 {
             font-size: 22px;
         }
 
-        .mobile-h3 {
+        .resp-h3 {
             font-size: 18px;
         }
 
-        .mobile-h4 {
+        .resp-h4 {
             font-size: 14px;
         }
 
@@ -238,12 +242,12 @@
             display: inline-block;
         }
 
-        .i-amphtml-accordion-header {
+        .accordion-header {
             border-top: 2px solid #6600CC;
             padding: .25rem;
         }
 
-        .i-amphtml-accordion-header:focus {
+        .accordion-header:focus {
             outline: none;
             border: 2px solid #85bf31;
         }
@@ -265,8 +269,8 @@
             -webkit-transform: rotate(45deg);
         }
 
-        .i-amphtml-accordion-header:focus .down {
-            
+        .accordion-header:focus .down {
+
             margin: 2px;
             transform: rotate(-135deg);
             -webkit-transform: rotate(-135deg);
@@ -402,7 +406,23 @@
         }
 
         @media (min-width: 400px) {
-            .mobile-h2 {
+            p {
+                font-size: 16px;
+            }
+
+            .resp-h1 {
+                font-size: 28px;
+            }
+
+            .resp-h2 {
+                font-size: 24px;
+            }
+
+            .resp-h3 {
+                font-size: 20px;
+            }
+
+            .resp-h4 {
                 font-size: 16px;
             }
 
@@ -442,12 +462,20 @@
         }
 
         @media (min-width: 600px) {
-            .mobile-h1 {
+            .resp-h1 {
                 font-size: 30px;
             }
 
-            .mobile-h2 {
-                font-size: 24px;
+            .resp-h2 {
+                font-size: 26px;
+            }
+
+            .resp-h3 {
+                font-size: 22px;
+            }
+
+            .resp-h4 {
+                font-size: 18px;
             }
 
             .mobile-carousel {
@@ -472,12 +500,20 @@
         }
 
         @media (min-width: 700px) {
-            .mobile-h1 {
+            .resp-h1 {
                 font-size: 35px;
             }
 
-            .mobile-h2 {
+            .resp-h2 {
                 font-size: 28px;
+            }
+
+            .resp-h3 {
+                font-size: 24px;
+            }
+
+            .resp-h4 {
+                font-size: 20px;
             }
         }
     </style>
@@ -591,7 +627,7 @@
             </amp-carousel>
             <div class="bg-gradient">
                 <div class="banner-content">
-                    <h1 class="center white-font mobile-h1">
+                    <h1 class="center white-font resp-h1">
                         <span [text]="myState.content[currentContent].name">Unfold endless possibilities</span>
                     </h1>
                     <p class="center white-font">
@@ -618,10 +654,11 @@
                         <a href="https://tinuiti.com/case-study/advil/" target="_blank">
                             <amp-img src="https://i.ibb.co/S5NbFwx/Tinuiti-Advil.png" width="308" height="256"
                                 layout="responsive" alt="Advil">
+                            </amp-img>
                         </a>
-                        </amp-img>
+                        
                         <figcaption>
-                            <h4 class="mobile-h4">Driving Sales With an Immersive Amazon Store Shopping Experience
+                            <h4 class="resp-h4">Driving Sales With an Immersive Amazon Store Shopping Experience
                             </h4>
                             <a href="https://tinuiti.com/case-study/advil/" target="_blank">
                                 <h4 class="read-more">READ MORE</h4>
@@ -638,7 +675,7 @@
                             </amp-img>
                         </a>
                         <figcaption>
-                            <h4 class="mobile-h4">Boosting Opens & Doubling Revenue with Personalized & Segmented
+                            <h4 class="resp-h4">Boosting Opens & Doubling Revenue with Personalized & Segmented
                                 Emails
                             </h4>
                             <a href="https://tinuiti.com/case-study/mvmt/" target="_blank">
@@ -656,7 +693,7 @@
                             </amp-img>
                         </a>
                         <figcaption>
-                            <h4 class="mobile-h4">Tackling Tough SEO Updates to Win +41.4% Jump in Organic Site
+                            <h4 class="resp-h4">Tackling Tough SEO Updates to Win +41.4% Jump in Organic Site
                                 Traffic
                             </h4>
                             <a href="https://tinuiti.com/case-study/samanage/" target="_blank">
@@ -674,7 +711,7 @@
                             </amp-img>
                         </a>
                         <figcaption>
-                            <h4 class="mobile-h4">Saving Time and Money on Facebook with Dynamic Ads</h4>
+                            <h4 class="resp-h4">Saving Time and Money on Facebook with Dynamic Ads</h4>
                             <a href="https://tinuiti.com/case-study/blink/" target="_blank">
                                 <h4 class="read-more">READ MORE</h4>
                             </a>
@@ -688,11 +725,28 @@
 
         <!-- Start Accordion Tips -->
         <section class="accordion-section">
-            <h1 class="black-font center mobile-h1">Helpful Guides from the Blog</h1>
+            <h1 class="black-font center resp-h1">Helpful Guides from the Blog</h1>
             <amp-accordion class="accordion" animate expand-single-section>
 
                 <section>
-                    <h3 class="center mobile-h3">Section 1 &nbsp;<i class="arrow down"></i></h3>
+                    <h4 class="center resp-h4 accordion-header">CRM & Email: Q1 Holiday Calendar &nbsp;<i
+                            class="arrow down"></i></h4>
+                    <div class="accordion-content">
+                        <p class="center default-padding">(Tap image for larger view)</p>
+                        <amp-anim on="tap:lightbox1" role="button" tabindex="1"
+                            src="https://i.ibb.co/2KnQNpR/valentines.gif" alt="Q1 Holiday Calendar"
+                            title="Q1 Holiday Calendar" layout="responsive" width="800" height="500"></amp-anim>
+                        <amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
+                        <div class="btn-wrapper">
+                            <a class="btn gradient-btn"
+                                href="https://tinuiti.com/blog/email-marketing/q1-holiday-calendar-email-marketing/"
+                                target="_blank">View The Blog
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h4 class="center resp-h4 accordion-header">Section 2 &nbsp;<i class="arrow down"></i></h4>
                     <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id,
                         vestibulum aliqua vivamus
                         luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis
@@ -700,15 +754,7 @@
                         dolore neque feugiat proin fermentum odio, odio arcu in eu wisi. </p>
                 </section>
                 <section>
-                    <h3 class="center mobile-h3">Section 2 &nbsp;<i class="arrow down"></i></h3>
-                    <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id,
-                        vestibulum aliqua vivamus
-                        luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis
-                        volutpat,
-                        dolore neque feugiat proin fermentum odio, odio arcu in eu wisi. </p>
-                </section>
-                <section>
-                    <h3 class="center mobile-h3">Section 3 &nbsp;<i class="arrow down"></i></h3>
+                    <h4 class="center resp-h4 accordion-header">Section 3 &nbsp;<i class="arrow down"></i></h4>
                     <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id,
                         vestibulum aliqua vivamus
                         luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis
@@ -731,7 +777,7 @@
                 </div>
                 <div class="pred-section">
                     <div class="content-wrapper white-font center">
-                        <h2 class="mobile-h2">Email Marketing Strategies for the Modern Marketer</h2>
+                        <h2 class="resp-h2">Email Marketing Strategies for the Modern Marketer</h2>
                         <div class="btn-wrapper">
                             <a class="btn white-btn"
                                 href="https://tinuiti.com/content/guides/2020-crm-email-marketing-predictions/"
@@ -747,7 +793,7 @@
         <!-- Start AMP Email Rating -->
         <section class="form-section">
             <form class="form" method="POST" action-xhr="https://formspree.io/meqapzbw">
-                <h1 class="mobile-h1">Rate Your AMP Email Experience</h1>
+                <h1 class="resp-h1">Rate Your AMP Email Experience</h1>
                 <div class="input-grp">
                     <input class="input option-input radio" type="radio" id="numOne" name="rating" value="Amazing"
                         checked>
