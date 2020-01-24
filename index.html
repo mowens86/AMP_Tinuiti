@@ -15,7 +15,6 @@
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
-    <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js">
     </script>
     <!-- Remove link rel for playground testing start -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800|Roboto:400,700&display=swap" rel="stylesheet">
@@ -753,10 +752,12 @@
                             class="arrow down"></i></h4>
                     <div class="accordion-content">
                         <p class="center default-padding">(Tap image for larger view)</p>
-                        <amp-anim on="tap:lightbox1" role="button" tabindex="1"
-                            src="https://i.ibb.co/2KnQNpR/valentines.gif" alt="Q1 Holiday Calendar"
-                            title="Q1 Holiday Calendar" layout="responsive" width="800" height="500"></amp-anim>
-                        <amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
+
+                        <a href="https://i.ibb.co/2KnQNpR/valentines.gif" target="_blank">
+                            <amp-anim src="https://i.ibb.co/2KnQNpR/valentines.gif" alt="Q1 Holiday Calendar"
+                                title="Q1 Holiday Calendar" layout="responsive" width="800" height="500">
+                            </amp-anim>
+                        </a>
                         <div class="btn-wrapper">
                             <a class="btn gradient-btn"
                                 href="https://tinuiti.com/blog/email-marketing/q1-holiday-calendar-email-marketing/"
