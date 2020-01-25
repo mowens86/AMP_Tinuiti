@@ -15,7 +15,6 @@
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
-    </script>
     <!-- Remove link rel for playground testing start -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800|Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
@@ -49,6 +48,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
+            background-color: #f6f6f6;
         }
 
         input,
@@ -69,6 +69,10 @@
         li {
             margin: 0;
             font-size: 14px;
+        }
+
+        .white-bg {
+            background-color: #fff;
         }
 
         .resp-h1 {
@@ -617,7 +621,7 @@
         </div>
 
 
-        <header class="default-padding center">
+        <header class="default-padding center white-bg">
             <a href="https://tinuiti.com/" target="_blank">
                 <amp-img src="https://i.ibb.co/R4sxPXp/logo.png" width="150" height="52" alt="Tinuiti"></amp-img>
             </a>
@@ -694,7 +698,7 @@
         <!-- End Hero Section  -->
 
         <!-- Start Work Area  -->
-        <section>
+        <section class="white-bg">
             <div class="work-wrapper">
                 <div class="work-item">
                     <figure>
@@ -771,7 +775,7 @@
         <!-- End Work Area -->
 
         <!-- Start Accordion Tips -->
-        <section class="accordion-section">
+        <section class="accordion-section white-bg">
             <h1 class="black-font center resp-h1">Helpful Guides from the Blog</h1>
             <amp-accordion class="accordion" animate expand-single-section>
 
@@ -961,7 +965,7 @@
         <!-- End CRM & Email Marketing Predictions for 2020 Section -->
 
         <!-- Start AMP Email Rating -->
-        <section class="form-section">
+        <section class="form-section white-bg">
             <form class="form" method="POST" action-xhr="https://formspree.io/meqapzbw">
                 <h1 class="resp-h1">Rate Your AMP Email Experience</h1>
                 <div class="input-grp">
