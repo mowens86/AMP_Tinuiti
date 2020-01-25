@@ -87,6 +87,10 @@
             font-size: 14px;
         }
 
+        .resp-p {
+            font-size: 12px;
+        }
+
         .email-wrapper {
             margin: 0 auto;
             max-width: 800px;
@@ -257,9 +261,11 @@
         }
 
         .accordion-header {
-            border-top: 2px solid #6600CC;
+            border: 2px solid #6600CC;
             background-color: #FFF;
             padding: .25rem;
+            border-radius: 50px;
+            margin: 2px 0;
         }
 
         .accordion-header:focus {
@@ -289,6 +295,19 @@
             margin: 2px;
             transform: rotate(-135deg);
             -webkit-transform: rotate(-135deg);
+        }
+
+        .accordion-sub-header {
+            border-top: 1px solid #000;
+            background-color: #FFF;
+            padding: .5rem;
+            border-radius: 50px;
+            margin: 2px 0;
+        }
+
+        .accordion-sub-header:focus {
+            outline: none;
+            border: 1px solid #85bf31;
         }
 
         .crm-section,
@@ -422,11 +441,15 @@
 
         @media (min-width: 400px) {
 
-            p,
+
             ol,
             ul,
             li {
                 font-size: 16px;
+            }
+
+            .resp-p {
+                font-size: 14px;
             }
 
             .resp-h1 {
@@ -495,6 +518,11 @@
 
             .resp-h4 {
                 font-size: 18px;
+            }
+
+            p,
+            .resp-p {
+                font-size: 16px;
             }
 
             .mobile-carousel {
@@ -770,16 +798,102 @@
                     <h4 class="center resp-h4 accordion-header">Paid Search: 8 Predictions for 2020 &nbsp;<i
                             class="arrow down"></i></h4>
                     <div class="accordion-content">
-                        <ol>
-                            <li>Increased Spend & Competition in Shopping and Search</li>
-                            <li>More Upper Funnel Opportunities With New Ad Formats</li>
-                            <li>Demand For Higher Quality Creative & Cross-channel Storytelling</li>
-                            <li>Google Shopping Actions</li>
-                            <li>Google Universal App Campaigns</li>
-                            <li>More Auto Bidding Improvements</li>
-                            <li>Tying Online and Offline Performance</li>
-                            <li>AI-Powered Data Aggregation</li>
-                        </ol>
+                        <amp-accordion class="accordion" animate expand-single-section>
+                            <section>
+                                <h5 class="default-padding accordion-sub-header">1. Increased Spend & Competition</h5>
+                                <p class="default-padding">In 2019, we saw record ad spend across Google’s Search and
+                                    Shopping properties — a signal that indicates more competition between brands to
+                                    show for search results.<br></br>
+
+                                    One of the clearest signs of this is the increased competition for sponsored
+                                    placements during 2019’s biggest shopping holidays — Black Friday and the “Cyber
+                                    Five” weekend.</p>
+                            </section>
+                            <section>
+                                <h5 class="default-padding accordion-sub-header">2. More Upper Funnel Opportunities</h5>
+                                <p class="default-padding">Another trend that advertisers should be mindful of in 2020
+                                    is Google’s expansion of upper-funnel inventory to reach customers earlier in the
+                                    shopping journey.<br></br>
+
+                                    New Discovery ads, improvements to Showcase shopping ads, Gallery ads, and more are
+                                    all indicators that Google is paying serious attention to giving advertisers more
+                                    inventory to generate demand from the very beginning of the shopper’s
+                                    journey.<br></br>
+
+                                    Brands should consider moving more investment to support their upper funnel
+                                    initiatives with these newer formats given that they have the resources to test and
+                                    optimize.</p>
+                            </section>
+                            <section>
+                                <h5 class="default-padding accordion-sub-header">3. Demand For Higher Quality
+                                    Storytelling</h5>
+                                <p class="default-padding">In their latest media report, Forrester predicts that
+                                    “advertisers will give up hypertargeting for a hyperfocus on creative,” and that
+                                    “creative adtech will improve ad quality and cross-channel storytelling as
+                                    cheap-looking, product-focused display ads decline.”<br></br>
+
+                                    Higher-quality creative is essential for building a consistent visual experience for
+                                    customers across all of your digital properties, from your Search & Shopping ads to
+                                    your ecommerce website and social pages.</p>
+                            </section>
+                            <section>
+                                <h5 class="default-padding accordion-sub-header ">4. Google Shopping Actions</h5>
+                                <p class="default-padding">Google Shopping Actions was released in 2019, designed to
+                                    create a seamless shopping experience across multiple Google surfaces, which
+                                    includes a universal shopping cart and instant checkout for retailers that are in
+                                    the program. Retailers will likely see further updates to the program in
+                                    2020.<br></br>
+
+                                    Google is promoting this as a streamlined, frictionless shopping experience for the
+                                    user.<br></br>
+
+                                    Under Shopping Actions, Google will handle sales, support and returns, but you will
+                                    still be responsible for fulfillment–and that fulfillment must still integrate with
+                                    OMS.</p>
+                            </section>
+                            <section>
+                                <h5 class="default-padding accordion-sub-header ">5. Google Universal App Campaigns</h5>
+                                <p class="default-padding">Over the last year, we’ve seen Google make big strides in
+                                    offering more capabilities for mobile app advertisers, specifically with Universal
+                                    App Campaigns and the new Google Analytics for Firebase.</p>
+                            </section>
+                            <section>
+                                <h5 class="default-padding accordion-sub-header ">6. More Auto Bidding Improvements</h5>
+                                <p class="default-padding">In 2019, Google retired Average Position in an effort to push
+                                    users from focusing on average position reporting to impression share. As a result,
+                                    this forced businesses to rely more on Google’s auto bidding feature.</p>
+                            </section>
+                            <section>
+                                <h5 class="default-padding accordion-sub-header ">7. Tying Online and Offline
+                                    Performance</h5>
+                                <p class="default-padding">The integration of online and offline performance is going to
+                                    be important in the upcoming year. By creating attributes for offline sales calls,
+                                    marketers can begin to understand the customer behind the call and what motivates
+                                    them.<br></br>
+
+                                    From there, artificial intelligence can analyze calls and assign them value scores,
+                                    spread this data across your martech stack, and use that data to optimize your paid
+                                    search performance.<br></br>
+
+                                    This will make it incredibly easy to segment your customers based on their
+                                    conversations and the outcome of the call.</p>
+                            </section>
+                            <section>
+                                <h5 class="default-padding accordion-sub-header ">8. AI-Powered Data Aggregation</h5>
+                                <p class="default-padding">Data is important, but unfortunately gathering it isn’t
+                                    always easy. There are multiple points to collect data from and hundreds of
+                                    thousands of tools to collect data with.<br></br>
+
+                                    This will be less of a problem in the upcoming year. Increasingly powerful AI and
+                                    automation features will make it easier for Google’s algorithm to collect more
+                                    accurate data.<br></br>
+
+                                    On top of that, it will help you understand this data better as well. Google’s
+                                    algorithm is now capable of predicting and correcting issues that can impact your
+                                    data, giving you a more accurate, holistic view of what’s going on in your business.
+                                </p>
+                            </section>
+                        </amp-accordion>
                         <div class="btn-wrapper">
                             <a class="btn gradient-btn"
                                 href="https://tinuiti.com/blog/paid-search/the-future-of-paid-search-google-ads-2020/"
@@ -789,13 +903,33 @@
                     </div>
                 </section>
                 <section>
-                    <h4 class="center resp-h4 accordion-header">Analytics: Google Phasing Out Third-Party Cookies
+                    <h4 class="center resp-h4 accordion-header">What is Amazon DSP? [2020 Update]
                         &nbsp;<i class="arrow down"></i></h4>
-                    <p class="accordion-content">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id,
-                        vestibulum aliqua vivamus
-                        luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis
-                        volutpat,
-                        dolore neque feugiat proin fermentum odio, odio arcu in eu wisi. </p>
+                    <div>
+                        <p class="accordion-content">Amazon DSP — also known as the demand-side platform — is available
+                            under Amazon advertising. DSP enables advertisers to programmatically buy video and ad
+                            placements. Programmatic advertising uses data to decide which digital advertising spaces to
+                            buy
+                            and how much to pay for them. <br></br>
+
+                            Advertisers are increasing investment in the Amazon DSP, which allows brands to use Amazon
+                            targeting capabilities in showing ads not only on Amazon owned-and-operated web properties,
+                            but
+                            also those that it does not control.<br></br>
+
+                            According to the Tinuiti Amazon Ads Benchmark Report, in Q3 2019, 32% of all Amazon DSP
+                            spend
+                            was attributed to ad impressions that appeared outside of Amazon owned-and-operated
+                            properties.
+                        </p>
+                        <div class="btn-wrapper">
+                            <a class="btn gradient-btn"
+                                href="https://tinuiti.com/blog/paid-search/the-future-of-paid-search-google-ads-2020/"
+                                target="_blank">View The Blog
+                            </a>
+                        </div>
+                    </div>
+
                 </section>
             </amp-accordion>
         </section>
